@@ -85,38 +85,3 @@ const users = [
   },
 ];
 
-const newUsers = users.map((el, index, arr) => el.balance);
-// console.log("map: ", newUsers);
-
-const filter = users.filter((item, i, array) => {
-  return item.age >= 30;
-});
-// console.log("filter: ", filter);
-
-const some = users.some((item, i, array) => {
-  return item.age >= 40;
-});
-// console.log("some: ", some);
-
-const every = users.every((item, i, array) => {
-  return item.age <= 40;
-});
-// console.log("every: ", every);
-
-const reduce = users.reduce((acc, user, i, array) => {
-  console.log(`Ітерація ${i + 1}`, acc);
-  return {
-    ...acc,
-    [user.name]: user.age,
-  };
-}, {});
-console.log("reduce: ", reduce);
-
-console.log(`users.reduce((acc, user, i, array) => {
-  acc.push(user);
-  return acc
-}, []);`);
-
-// const callback = function callback2(acc, item, i, array) {
-//   acc += item;
-// };
